@@ -1,0 +1,16 @@
+### ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: cart
+  namespace: roboshop
+  labels:
+    component: cart
+    project: roboshop
+    tier: app
+data:
+  CATALOGUE_ENDPOINT: "catalogue:8080"
+  CART_ENDPOINT: "cart:8080"
+  USER_ENDPOINT: "user:8080"
+  SHIPPING_ENDPOINT: "shipping:8080"
+  PAYMENT_ENDPOINT: "payment:8080"

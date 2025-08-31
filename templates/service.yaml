@@ -1,0 +1,19 @@
+### Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: roboshop
+  labels:
+    component: frontend
+    project: roboshop
+    tier: web
+spec:
+  selector:
+    component: frontend
+    project: roboshop
+    tier: web
+  ports:
+    - protocol: TCP 
+      port: 80  ## service port
+      targetPort: 80  ## container port
