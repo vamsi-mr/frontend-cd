@@ -27,12 +27,9 @@ spec:
       containers:
       - name: frontend
         image: {{ .Values.deployment.imageURL }}:{{ .Values.deployment.imageVersion }}
-        #command: ["sh", "-c", "echo 'failure' && exit 1"]
         envFrom:
         - configMapRef:
             name: frontend
-        ports:
-        - containerPort: 80
         resources:
           requests:
             cpu: 50m
