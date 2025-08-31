@@ -1,0 +1,10 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: frontend
+  namespace: roboshop
+spec:
+  serviceRef: 
+    name: frontend
+    port: 80
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:025523569021:targetgroup/roboshop-dev-frontend/c65d9d808a74d648
