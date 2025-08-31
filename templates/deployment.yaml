@@ -32,7 +32,7 @@ spec:
         - configMapRef:
             name: frontend
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           requests:
             cpu: 50m
