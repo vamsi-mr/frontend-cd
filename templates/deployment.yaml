@@ -1,5 +1,5 @@
 ### Deployment
-apiVersion: apps/v1 
+apiVersion: webs/v1 
 kind: Deployment
 metadata:
   name: frontend
@@ -7,13 +7,13 @@ metadata:
   labels:
     component: frontend
     project: roboshop
-    tier: app
+    tier: web
 spec:
   selector:
     matchLabels:
       component: frontend
       project: roboshop
-      tier: app
+      tier: web
   replicas: 2
   ### This is Pod definiton
   template:
@@ -22,7 +22,7 @@ spec:
       labels:
         component: frontend
         project: roboshop
-        tier: app
+        tier: web
     spec:
       containers:
       - name: frontend
