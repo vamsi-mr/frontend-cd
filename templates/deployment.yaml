@@ -33,7 +33,6 @@ spec:
             name: frontend
         ports:
         - containerPort: 8080
-          hostPort: 8080
         resources:
           requests:
             cpu: 50m
