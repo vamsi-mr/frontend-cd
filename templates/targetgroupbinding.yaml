@@ -3,6 +3,10 @@ kind: TargetGroupBinding
 metadata:
   name: frontend
   namespace: roboshop
+  labels:
+    component: frontend
+    project: roboshop
+    tier: web
 spec:
   serviceRef: 
     name: frontend
