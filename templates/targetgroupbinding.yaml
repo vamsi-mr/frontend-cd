@@ -3,12 +3,8 @@ kind: TargetGroupBinding
 metadata:
   name: frontend
   namespace: roboshop
-  labels:
-    component: frontend
-    project: roboshop
-    tier: web
 spec:
-  serviceRef: 
-    name: frontend
+  serviceRef:
+    name: frontend # route traffic to the awesome-service
     port: 80
-  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:025523569021:targetgroup/roboshop-dev-frontend/b1e93e24ba0cba89
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:025523569021:targetgroup/roboshop-dev-frontend/3c549e526b605398
